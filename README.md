@@ -5,9 +5,12 @@
 * /convert/celsius/
 * /convert/kelvin/
 * /convert/rankine/
-### Each of the endpoints receives a tempertaure, and returns a JSON object of that temperature converted into the other three temperature scales.
-* Some example input:  
-    * http://localhost:5000/convert/fahrenheit/-212/  
+### Each of the endpoints receives a tempertaure, and returns a JSON object of that temperature converted into the other three temperature scales.  
+* Input temperature can be negative, or a floating number  
+* Input temperature has to be a valid number in decimal notation, Scientic notation not accepted :( 
+* Example input:  
     * http://localhost:5000/convert/kelvin/20.78/  
-    * http://localhost:5000/convert/celsius/32/
-* Input temperature has to be a valid number in decimal notation. (Scientic notation not accepted :( )
+* Example output:  
+    * {"celsius":-252.36999999999998,"fahrenheit":-422.26599999999996,"rankine":37.404}  
+* Can handle invalid input type and values 
+
